@@ -11,15 +11,15 @@ public class AlunoApresentacao {
 	Scanner iput = new Scanner(System.in);
 	int verifica; 
 	
-	public void exibirMenu() throws ExcecaoAlunoInvalido {
+	 while (true) {
 		System.out.println("Digite a opção desejada");
 		System.out.println("1 para inserir um aluno;");
 		System.out.println("2 para consultar um aluno;");
 		System.out.println("3 para remover um aluno;");
 		System.out.println("4 para alterar um aluno;");
+		int escolha = scanner.nextInt();
 		
-		Scanner scanner = new Scanner(System.in);
-		int opcao = Integer.parseInt(scanner.nextLine());
+		switch (escolha) {
 		if (opcao == 1) {
 			this.inserir();
 		}
@@ -27,8 +27,10 @@ public class AlunoApresentacao {
 			this.alterar();
 		}
 	}
-	
-	private void inserir() throws ExcecaoAlunoInvalido {
+}
+}
+	case 1:
+		private void inserir() throws ExcecaoAlunoInvalido {
 		
 		Aluno aluno= new Aluno();
 		
@@ -47,39 +49,31 @@ public class AlunoApresentacao {
 		aluno.setId(verifica);
 		verifica++;
 		
-		Aluno aluno1 = new Aluno();
-		aluno1.setCpf("78933357777"); // scanner.next... 789.333.577-77
-		aluno1.setNome("Victor");
-		aluno1.setEmail("vl@cin.upfe.br");
-		aluno1.setId(1);
-		
-		Aluno aluno2 = new Aluno();
-		aluno2.setCpf("78933357777"); // scanner.next... 789.333.577-77
-		aluno2.setNome("Sergio");
-		aluno2.setEmail("vl@cin.upfe.br");
-		aluno2.setId(2);
 		
 		ControladorAluno controlador = new ControladorAluno();
 		controlador.inserir(aluno);
-		controlador.inserir(aluno1);
-		controlador.inserir(aluno2);
+		break;
 	}
-	
-	private void consultar() {
-		
+	case 2:
+		private void consultar() {
+	  break;	
 	}
-	
-	
-	
+case 3:
+	private void remover(){
+}
+	  case 4:
 	
 	private void alterar() {
 		
 		System.out.println("Qual aluno voce deseja alterar???");
 		String recebeNome = iput.nextLine();
 		
-		
-		
-		
+	break;	
+		  case 5:
+			  scanner.close();
+		  System.exit(0);
+		  default:
+			  break;
 		
 		
 		
