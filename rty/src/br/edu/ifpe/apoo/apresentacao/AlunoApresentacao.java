@@ -73,6 +73,7 @@ case 3:
 			  scanner.close();
 		  System.exit(0);
 		  default:
+			  syso("opçao invalida");
 			  break;
 		
 		
