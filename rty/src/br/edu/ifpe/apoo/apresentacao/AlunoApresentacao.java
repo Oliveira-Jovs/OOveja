@@ -30,7 +30,7 @@ public class AlunoApresentacao {
 }
 }
 	case 1:
-		private void inserir() throws ExcecaoAlunoInvalido {
+		private void inserir() 
 		
 		Aluno aluno= new Aluno();
 		
